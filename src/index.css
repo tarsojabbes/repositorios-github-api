@@ -7,7 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #252525;
+  background-color: #e0dcdc;
+  font-family: monospace;
 }
 
 code {
@@ -16,9 +17,30 @@ code {
 }
 
 h1 {
-  padding: 30px;
   text-transform: uppercase;
-  color: #FFF;
+  color: #252525;
+}
+
+.typing-demo {
+  width: 28ch;
+  animation: typing 2s steps(28), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 #landing {
@@ -31,6 +53,7 @@ h1 {
 }
 
 #campo {
+  margin: 30px;
   display: inline-flex;
   flex-direction: row;
 }
@@ -57,11 +80,13 @@ h1 {
 button {
   height: 60px;
   width: 100px;
-  border: none;
+  border: 1px solid #FFFFFF;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+  background-color: #252525;
+  color: white;
 }
 
 button:hover {
@@ -72,7 +97,7 @@ button:hover {
 
 @keyframes btnhover {
   100% {
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(92, 92, 92);
   }
 }
 
