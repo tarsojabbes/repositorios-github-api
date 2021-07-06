@@ -29,15 +29,20 @@ export default function App() {
       <div id="landing">
         <h1>Repositórios do Github</h1>
         <div id="campo">
-          <input placeholder="Usuário" className="usuarioInput"
-            onChange={(e) => setUsuario(e.target.value)}
-            value={usuario} />
-          <button type='button' onClick={handlePesquisa} >Pesquisar</button>
+          <div className="form-floating mb-3">
+            <input className="form-control" id="floatingInput" placeholder="Usernname" onChange={(e) => setUsuario(e.target.value)}
+              value={usuario} />
+            <label for="floatingInput">Username</label>
+          </div>
+
+          <button type='button' onClick={handlePesquisa}>Pesquisar</button>
         </div>
       </div>
 
       <div id="repositorios">
-        {repositorios.map((nome) => <li>{nome}</li>)}
+        <div id="box-repo">
+          {repositorios.map((nome) => <li>{nome}</li>)}
+        </div>
       </div>
     </>
   )

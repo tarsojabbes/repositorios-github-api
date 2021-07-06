@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #252525;
 }
 
 code {
@@ -16,6 +17,8 @@ code {
 
 h1 {
   padding: 30px;
+  text-transform: uppercase;
+  color: #FFF;
 }
 
 #landing {
@@ -39,8 +42,60 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style: none;
 }
 
+#floatingInput {
+  height: 60px;
+  width: 300px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+
+}
+button {
+  height: 60px;
+  width: 100px;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+button:hover {
+  animation-name: btnhover;
+  animation-fill-mode: forwards;
+  animation-duration: 200ms;
+}
+
+@keyframes btnhover {
+  100% {
+    background-color: rgb(187, 187, 187);
+  }
+}
+
+li {
+  width: 600px;
+  background-color: #FFF;
+  height: 50px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+}
+
+#box-repo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 80vh;
+  overflow-y: scroll;
+  width: 700px;
+}
 
 
 
