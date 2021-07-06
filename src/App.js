@@ -26,13 +26,17 @@ export default function App() {
   return (
 
     <>
-      <h1>Repositórios do Github</h1>
-      <input placeholder="Usuário" className="usuarioInput"
-        onChange={(e) => setUsuario(e.target.value)}
-        value={usuario} />
+      <div id="landing">
+        <h1>Repositórios do Github</h1>
+        <div id="campo">
+          <input placeholder="Usuário" className="usuarioInput"
+            onChange={(e) => setUsuario(e.target.value)}
+            value={usuario} />
+          <button type='button' onClick={handlePesquisa} >Pesquisar</button>
+        </div>
+      </div>
 
-      <button type='button' onClick={handlePesquisa} >Pesquisar</button>
-      <div>
+      <div id="repositorios">
         {repositorios.map((nome) => <li>{nome}</li>)}
       </div>
     </>
