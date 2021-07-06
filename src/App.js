@@ -28,6 +28,8 @@ export default function App() {
   return (
 
     <>
+
+
       <div id="landing">
         <div className="wrapper">
           <div className="typing-demo">
@@ -56,6 +58,12 @@ export default function App() {
           {repositorios.map((nome) => <li>{nome.split('-').join(" ").split("_").join(" ")}</li>)}
         </div>
       </div>
+
+      <footer>
+        <a href="https://github.com/tarsojabbes" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-github-1.png&r=224&g=220&b=220" alt="Github" /></a>
+        <a href="https://linkedin.com/in/tarsojabbes/" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-linkedin-4.png&r=224&g=220&b=220" alt="LinkedIn" /></a>
+      </footer>
+
     </>
   )
 }
