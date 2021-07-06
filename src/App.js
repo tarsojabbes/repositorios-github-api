@@ -60,6 +60,7 @@ export default function App() {
       </div>
 
       <footer>
+        <a>Esta é uma ferramenta desenvolvida por Tarso Jabbes</a>
         <a href="https://github.com/tarsojabbes" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-github-1.png&r=224&g=220&b=220" alt="Github" /></a>
         <a href="https://linkedin.com/in/tarsojabbes/" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-linkedin-4.png&r=224&g=220&b=220" alt="LinkedIn" /></a>
       </footer>

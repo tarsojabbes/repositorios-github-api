@@ -119,7 +119,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 75vh;
+  max-height: 80vh;
   overflow-y: scroll;
   width: 700px;
 }
@@ -133,6 +133,7 @@ footer {
   height: 5vh;
   position: fixed;
   bottom: 0px;
+  color: #e0dcdc;
 }
 
 a {
