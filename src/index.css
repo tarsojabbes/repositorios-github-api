@@ -83,8 +83,9 @@ li {
   margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 10px;
+  text-transform: capitalize;
 }
 
 #box-repo {

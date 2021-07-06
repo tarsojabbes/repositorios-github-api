@@ -41,7 +41,7 @@ export default function App() {
 
       <div id="repositorios">
         <div id="box-repo">
-          {repositorios.map((nome) => <li>{nome}</li>)}
+          {repositorios.map((nome) => <li>{nome.split('-').join(" ").split("_").join(" ")}</li>)}
         </div>
       </div>
     </>
