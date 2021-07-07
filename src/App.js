@@ -5,20 +5,38 @@ export default function App() {
 
   const [usuario, setUsuario] = useState('') // Armazena os valores do input Usuário
   const [repositorios, setRepositorios] = useState([])
+  const [link, setLink] = useState([])
   const [username, setUsername] = useState('')
 
   const handlePesquisa = () => {
     axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => { // Faz o request na API sobre os repositórios do Usuário inserido no Input
       const repositories = response.data; // Atribui os dados enviado pela API a uma variável local
-      const repositoriesName = [] // Criado para atribuir valores a ele
-      repositories.map((repository) => repositoriesName.push(repository.name)) // Para cada nome de repositório dos repositórios da API adicionar o nome em repositoriesName
-      localStorage.setItem('repositoriesName', repositoriesName)
+      const repositoriesNameLink = [] // Criado para atribuir valores a ele
+      repositories.map((repository) => repositoriesNameLink.push({ nome: repository.name, link: `https://github.com/${usuario}/${repository.name}` })) // Para cada nome de repositório dos repositórios da API adicionar o nome em repositoriesName
+      localStorage.setItem('repositoriesName', repositoriesNameLink.map((obj) => (obj.nome)))
+      localStorage.setItem('repositoriesLink', repositoriesNameLink.map((obj) => (obj.link)))
+      // console.log(repositoriesNameLink)
       setUsername(usuario)
 
       if (localStorage.getItem('repositoriesName') !== null) {
         const nomeArray = localStorage.getItem('repositoriesName').split(',')
+        const linkArray = localStorage.getItem('repositoriesLink').split(',')
+        console.log(linkArray)
+        //console.log(nomeArray)
+        setLink(linkArray)
         setRepositorios(nomeArray)
       }
+
+
+      //const repositoriesLink = []
+      //repositories.map((repository) => repositoriesLink.push(repository.url))
+      //localStorage.setItem('repositoriesLink', repositoriesLink)
+
+      //if (localStorage.getItem('repositoriesLink') !== null) {
+      //  const linkArray = localStorage.getItem('repositoriesLink').split(',')
+      //  setLink(linkArray)
+      //}
+
     }
     );
   }
@@ -43,7 +61,7 @@ export default function App() {
               placeholder="Usernname"
               onChange={(e) => setUsuario(e.target.value)}
               value={usuario} />
-            <label for="floatingInput">Username</label>
+            <label>Username</label>
           </div>
 
           <button type='button' onClick={handlePesquisa}>Pesquisar</button>
@@ -55,14 +73,16 @@ export default function App() {
       <div id="repositorios">
         <h1>{usuario === '' ? "Nenhum username informado" : `Repositórios encontrados para ${username}`}</h1>
         <div id="box-repo">
-          {repositorios.map((nome) => <li>{nome.split('-').join(" ").split("_").join(" ")}</li>)}
+          {repositorios.map((name, index) => <div className="inline-div"><li key={index}>{name.split('-').join(' ').split('_').join(" ")} </li></div>)}
+          {link.map((link) => <a href={link}><button>Abrir</button></a>)}
+
         </div>
       </div>
 
       <footer>
-        <a>Esta é uma ferramenta desenvolvida por Tarso Jabbes</a>
-        <a href="https://github.com/tarsojabbes" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-github-1.png&r=224&g=220&b=220" alt="Github" /></a>
-        <a href="https://linkedin.com/in/tarsojabbes/" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-linkedin-4.png&r=224&g=220&b=220" alt="LinkedIn" /></a>
+        <a id="footer-link" href="/">Esta é uma ferramenta desenvolvida por Tarso Jabbes</a>
+        <a id="footer-link" href="https://github.com/tarsojabbes" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-github-1.png&r=224&g=220&b=220" alt="Github" /></a>
+        <a id="footer-link" href="https://linkedin.com/in/tarsojabbes/" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-linkedin-4.png&r=224&g=220&b=220" alt="LinkedIn" /></a>
       </footer>
 
     </>

@@ -103,9 +103,9 @@ button:hover {
 }
 
 li {
-  width: 600px;
+  width: 500px;
   background-color: #FFF;
-  height: 50px;
+  height: 60px;
   margin: 10px;
   display: flex;
   align-items: center;
@@ -119,9 +119,16 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 80vh;
+  height: fit-content;
+  max-height: 700px;
   overflow-y: scroll;
   width: 700px;
+}
+
+.inline-div {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 footer {
@@ -130,15 +137,21 @@ footer {
   align-items: center;
   background-color: #252525;
   width: 100%;
-  height: 5vh;
+  height: 60px;
   position: fixed;
   bottom: 0px;
   color: #e0dcdc;
 }
 
-a {
+#footer-link {
+  color: #e0dcdc;
+  text-decoration: none;
   width: fit-content;
   padding: 0px 15px;
+}
+
+#footer-link:hover {
+  color: #e0dcdc;
 }
 
 img {
