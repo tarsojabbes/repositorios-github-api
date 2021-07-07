@@ -24,18 +24,13 @@ h1 {
 
 .typing-demo {
   width: 29ch;
-  animation: typing 3s steps(29) infinite alternate, blink 0.5s step-end infinite alternate;
+  animation: blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
   font-size: 2em;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
 
 @keyframes blink {
   50% {
@@ -182,20 +177,7 @@ img {
     font-size: 16px;
     text-align: center;
   }
-  .typing-demo {
-    width: 15ch;
-    animation: typing 3s steps(20) infinite alternate, blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-  
+
   @keyframes blink {
     50% {
       border-color: transparent;
