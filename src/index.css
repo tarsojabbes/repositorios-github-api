@@ -119,9 +119,13 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-height: 800px;
+  max-height: 600px;
   overflow-y: scroll;
   width: 700px;
+}
+
+.col {
+  max-height: 600px;
 }
 
 #box-links {
@@ -129,7 +133,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 800px;
+  max-height: 600px;
 }
 
 .link-btn {
