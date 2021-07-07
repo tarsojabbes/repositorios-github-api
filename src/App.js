@@ -79,14 +79,15 @@ export default function App() {
               {repositorios.map((name, index) => <li key={index}>{name.split('-').join(' ').split('_').join(" ")} </li>)}
             </div>
             <div className="col">
-              {link.map((link) => <div id="box-links"><a href={link}><button className="link-btn">Abrir</button></a></div>)}
+              {link.map((link) => <div id="box-links"><a href={link} target="_blank" rel="noreferrer noopener"><button className="link-btn">Abrir</button></a></div>)}
             </div>
           </div>
         </div>
       </div>
 
       <footer>
-        <a id="footer-link" href="/">Esta é uma ferramenta desenvolvida por Tarso Jabbes</a>
+        <a id="footer-link" href="#" className="frase">Esta é uma ferramenta desenvolvida por Tarso Jabbes</a>
+        <a id="footer-link" href="#" className="tarso">Tarso Jabbes</a>
         <a id="footer-link" href="https://github.com/tarsojabbes" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-github-1.png&r=224&g=220&b=220" alt="Github" /></a>
         <a id="footer-link" href="https://linkedin.com/in/tarsojabbes/" target="_blank" rel="noreferrer noopener"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-linkedin-4.png&r=224&g=220&b=220" alt="LinkedIn" /></a>
       </footer>
