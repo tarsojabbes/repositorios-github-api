@@ -10,6 +10,7 @@ export default function App() {
 
   const handlePesquisa = () => {
     axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => { // Faz o request na API sobre os repositórios do Usuário inserido no Input
+      localStorage.clear()
       const repositories = response.data; // Atribui os dados enviado pela API a uma variável local
       const repositoriesNameLink = [] // Criado para atribuir valores a ele
       repositories.map((repository) => repositoriesNameLink.push({ nome: repository.name, link: `https://github.com/${usuario}/${repository.name}` })) // Para cada nome de repositório dos repositórios da API adicionar o nome em repositoriesName
@@ -72,10 +73,15 @@ export default function App() {
 
       <div id="repositorios">
         <h1>{usuario === '' ? "Nenhum username informado" : `Repositórios encontrados para ${username}`}</h1>
-        <div id="box-repo">
-          {repositorios.map((name, index) => <div className="inline-div"><li key={index}>{name.split('-').join(' ').split('_').join(" ")} </li></div>)}
-          {link.map((link) => <a href={link}><button>Abrir</button></a>)}
-
+        <div className="row">
+          <div id="box-repo">
+            <div className="col">
+              {repositorios.map((name, index) => <li key={index}>{name.split('-').join(' ').split('_').join(" ")} </li>)}
+            </div>
+            <div className="col">
+              {link.map((link) => <div id="box-links"><a href={link}><button className="link-btn">Abrir</button></a></div>)}
+            </div>
+          </div>
         </div>
       </div>
 

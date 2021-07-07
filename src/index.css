@@ -116,20 +116,26 @@ li {
 
 #box-repo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-  max-height: 700px;
+  max-height: 800px;
   overflow-y: scroll;
   width: 700px;
 }
 
-.inline-div {
-  display: inline-flex;
-  justify-content: flex-start;
+#box-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  max-height: 800px;
 }
+
+.link-btn {
+  margin-top: 10px;
+}
+
 
 footer {
   display: flex;
