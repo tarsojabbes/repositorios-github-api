@@ -23,7 +23,7 @@ h1 {
 
 
 .typing-demo {
-  width: 29ch;
+  width: 24ch;
   animation: blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
