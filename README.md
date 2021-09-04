@@ -22,9 +22,9 @@ Você pode acessar o resultado final por meio deste link: [Busca de Repositório
 
 <p align="center" padding="30">
 <a href="https://repositoriosgithub.netlify.app/">
-<img src="https://media-exp1.licdn.com/dms/image/C4E22AQGR4RF9WucqAw/feedshare-shrink_1280/0/1626367497064?e=1631750400&v=beta&t=5W35XWdb0b-3QQAp3_O0FTazwgnXJiUKTywXg133IWo" width="auto" height="600">
+<img src="https://i.im.ge/2021/09/04/QSnZSm.jpg" width="auto" height="600">
 </a>
 <a href="https://repositoriosgithub.netlify.app/">
-<img src="https://media-exp1.licdn.com/dms/image/C4E22AQHSIifKvEvX0Q/feedshare-shrink_1280/0/1626367496975?e=1631750400&v=beta&t=0_RBGukAF6YmUj8rv04kDM2NivKo1QswbFaInzQNiq0" width="auto" height="600">
+<img src="https://i.im.ge/2021/09/04/QSnKNr.jpg" width="auto" height="600">
 </a>
 </p>
