@@ -11,10 +11,10 @@ Você pode acessar o resultado final por meio deste link: [Busca de Repositório
 #### Versão para Desktop ####
 <p align="center" padding="30">
 <a href="https://repositoriosgithub.netlify.app/">
-<img src="C:/Users/Usuario/Downloads/foto1">
+<img src="https://im.ge/i/foto1.QSnbep">
 </a>
 <a href="https://repositoriosgithub.netlify.app/">
-<img src="C:/Users/Usuario/Downloads/foto2">
+<img src="https://im.ge/i/foto2.QSngDP">
 </a>
 </p>
 
